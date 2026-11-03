@@ -115,6 +115,10 @@ stages:
       clean: true
       displayName: 'Checkout sonic-mgmt-common'
 
+    - checkout: sonic-swss-common
+      clean: true
+      displayName: 'Checkout native Redis binding'
+
     - template: .azure/templates/install-go.yml
       parameters:
         version: $(GO_VERSION)
